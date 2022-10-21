@@ -32,10 +32,30 @@
                 margin-left: 84px;
                 text-align: center;
             }
+
+            .green{
+                background-color: green;
+                color: white;
+            }
+
+            .red{
+                background-color: red;
+                color: black;
+            }
         </style>
 
         <script>
+            function bulbon(){
+                document.getElementById("btn-bulb").src = "./images/bulb-on.png";
+                document.getElementById("btn-on").className= "green on";
+                document.getElementById("btn-off").className= " on";
+            }
 
+            function bulboff(){
+                document.getElementById("btn-bulb").src = "./images/bulb-off.png";
+                document.getElementById("btn-off").className= "red on";
+                document.getElementById("btn-on").className= "on";
+            }
         </script>
     </head>
 
@@ -43,8 +63,8 @@
         <div class="card">
             <img src="./images/bulb-off.png" alt="png" id="btn-bulb" class="bulb">
             <div class="container">
-                <button id="btn-on" class="on">On</button>
-                <button id="btn-off" class="on">Off</button>
+                <button id="btn-on" onclick="bulbon()" class="on">On</button>
+                <button id="btn-off" onclick="bulboff()" class="on">Off</button>
             </div>
         </div>
     </body>
